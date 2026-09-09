@@ -6,12 +6,17 @@ import * as THREE from 'three';
 type Props={directory:boolean,active:number|null,expanded:boolean,reduced:boolean};
 const coords=Array.from({length:27},(_,i)=>[i%3-1,Math.floor(i/3)%3-1,Math.floor(i/9)-1] as [number,number,number]);
 const faceColors=['#bd090b','#ff7015','#ffd62a','#f0f0e8','#003bf1','#039e4c'];
+const heroFaceColors:Record<number,string[]>={
+  0:['#1550cb','#ec302b','#2453b6','#ea681e','#d52827','#e02823','#e33729','#d82423','#164cb6'],
+  2:['#53caff','#ea9978','#70dfff','#4ebeee','#429ee2','#7ad7ef','#67d4f9','#4abcea','#38b1ed'],
+  4:['#1c7850','#eec533','#f3ede3','#f4c22b','#164ea8','#e56022','#b32a33','#edba2a','#e59962']
+};
 const rotations:[[number,number,number],[number,number,number],[number,number,number],[number,number,number],[number,number,number],[number,number,number]]=[[0,Math.PI/2,0],[0,-Math.PI/2,0],[-Math.PI/2,0,0],[Math.PI/2,0,0],[0,0,0],[0,Math.PI,0]];
 const normals=[[1,0,0],[-1,0,0],[0,1,0],[0,-1,0],[0,0,1],[0,0,-1]];
 function Cubelet({position,index,directory,expanded,active}:Props&{position:[number,number,number],index:number}){
 const group=useRef<THREE.Group>(null);
 useFrame((_,delta)=>{if(group.current){const spacing=expanded?1.14:1;group.current.position.lerp(new THREE.Vector3(...position).multiplyScalar(spacing),1-Math.exp(-delta*7))}});
-return <group ref={group} position={position}><RoundedBox args={[.98,.98,.98]} radius={.07} smoothness={3}><meshPhysicalMaterial color="#080d15" roughness={.26} clearcoat={.6} clearcoatRoughness={.22}/></RoundedBox>{normals.map((normal,face)=>{if(!normal.some((n,axis)=>n!==0&&position[axis]===n))return null;const color=directory?faceColors[face]:faceColors[(index*7+face*3+(index%4===0?2:0))%6];const lit=active!==null&&[4,0,2,1,5,3][active]===face;return <RoundedBox key={face} args={[.85,.85,.044]} radius={.045} smoothness={3} position={normal.map(n=>n*.497) as [number,number,number]} rotation={rotations[face]}><meshPhysicalMaterial color={color} roughness={.28} metalness={0} clearcoat={.8} clearcoatRoughness={.2} emissive={color} emissiveIntensity={lit?.14:0}/></RoundedBox>})}</group>
+return <group ref={group} position={position}><RoundedBox args={[.98,.98,.98]} radius={.07} smoothness={3}><meshPhysicalMaterial color="#080d15" roughness={.26} clearcoat={.6} clearcoatRoughness={.22}/></RoundedBox>{normals.map((normal,face)=>{if(!normal.some((n,axis)=>n!==0&&position[axis]===n))return null;const cell=face===0?(position[1]+1)*3+position[2]+1:face===2?(position[2]+1)*3+position[0]+1:(position[1]+1)*3+position[0]+1;const color=directory?faceColors[face]:heroFaceColors[face]?.[cell]||faceColors[face];const lit=active!==null&&[4,0,2,1,5,3][active]===face;return <RoundedBox key={face} args={[.85,.85,.044]} radius={.045} smoothness={3} position={normal.map(n=>n*.497) as [number,number,number]} rotation={rotations[face]}><meshPhysicalMaterial color={color} roughness={.28} metalness={0} clearcoat={.8} clearcoatRoughness={.2} emissive={color} emissiveIntensity={lit?.14:0}/></RoundedBox>})}</group>
 }
 function Model(props:Props){
 const group=useRef<THREE.Group>(null);const {camera,size,gl,invalidate}=useThree();const velocity=useRef([0,0]);const rotation=useRef([.40,-.68]);const drag=useRef<{x:number,y:number}|null>(null);const [hover,setHover]=useState(false);
