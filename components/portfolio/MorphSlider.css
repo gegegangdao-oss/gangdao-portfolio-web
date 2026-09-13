@@ -1,0 +1,15 @@
+.morph-slider{position:relative;overflow:hidden;background:#081f3c;user-select:none;touch-action:none;isolation:isolate}
+.morph-slider:after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#071b3560,transparent 32%,#1f57931c 68%,#071b354d);mix-blend-mode:multiply}
+.morph-slider-stage{position:absolute;inset:0;z-index:0;outline:none;cursor:grab}
+.morph-slider-stage:active{cursor:grabbing}.morph-slider-stage:focus-visible{box-shadow:inset 0 0 0 2px #ffffffa8}
+.morph-slider-canvas{display:block;width:100%;height:100%;filter:saturate(.92) contrast(1.035)}
+.morph-slider-controls{position:absolute;right:1.8vw;top:50%;z-index:4;display:flex;flex-direction:column;gap:10px;transform:translateY(-50%)}
+.morph-slider-btn{display:grid;place-items:center;width:42px;height:42px;border:1px solid #b9dcff73;border-radius:50%;color:#fff;background:#071e3b73;backdrop-filter:blur(9px);font:300 20px/1 Arial;transition:transform .25s,background .25s,opacity .25s}
+.morph-slider-btn:hover:not(:disabled){transform:scale(1.07);background:#1d5b997d}.morph-slider-btn:disabled{opacity:.22;cursor:default}.morph-slider-btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.morph-slider-indicators{position:absolute;left:50%;bottom:2.1%;z-index:4;display:flex;align-items:center;gap:10px;transform:translateX(-50%)}
+.morph-slider-dot{width:28px;height:3px;padding:10px 0;border:0;color:#fff;background:transparent;opacity:.35;transition:width calc(var(--ms-duration)*.45),opacity .25s}
+.morph-slider-dot:before{content:'';display:block;width:100%;height:1px;background:currentColor}.morph-slider-dot span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.morph-slider-dot.is-active{width:54px;opacity:1}.morph-slider-dot:focus-visible{outline:1px solid #fff;outline-offset:2px}
+.morph-slider-caption{position:absolute;right:1.8vw;bottom:2%;z-index:4;font:400 10px/1 Arial;letter-spacing:.23em;color:#fff;opacity:.72;text-transform:uppercase}
+@media(max-width:700px){.morph-slider-controls{right:12px}.morph-slider-btn{width:36px;height:36px}.morph-slider-caption{right:12px;bottom:12px;font-size:8px}.morph-slider-indicators{bottom:12px}}
+@media(prefers-reduced-motion:reduce){.morph-slider-btn,.morph-slider-dot{transition:none}}

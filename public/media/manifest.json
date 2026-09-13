@@ -1,0 +1,51 @@
+[
+  {
+    "source": "电商主图.jpg",
+    "file": "treasure-pendant-product.webp",
+    "width": 1340,
+    "height": 2400
+  },
+  {
+    "source": "电商图片.png",
+    "file": "treasure-pendant-editorial.webp",
+    "width": 1340,
+    "height": 2400
+  },
+  {
+    "source": "电商视频生成.png",
+    "file": "pendant-video-workflow.webp",
+    "width": 1920,
+    "height": 919
+  },
+  {
+    "source": "fd4b52c253ab7b7800fbb4d1046099f7.jpg",
+    "file": "banyan-brick-courtyard.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  {
+    "source": "火种计划.mp4",
+    "file": "project-ember.mp4",
+    "poster": "project-ember-poster.jpg"
+  },
+  {
+    "source": "皇冠.mp4",
+    "file": "the-coronation.mp4",
+    "poster": "the-coronation-poster.jpg"
+  },
+  {
+    "source": "古风打斗.mp4",
+    "file": "blade-and-beast.mp4",
+    "poster": "blade-and-beast-poster.jpg"
+  },
+  {
+    "source": "初机号.mp4",
+    "file": "mecha-awakening.mp4",
+    "poster": "mecha-awakening-poster.jpg"
+  },
+  {
+    "source": "巨型飞船.mp4",
+    "file": "leviathan-in-the-clouds.mp4",
+    "poster": "leviathan-in-the-clouds-poster.jpg"
+  }
+]
