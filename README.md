@@ -13,7 +13,7 @@ npm run dev
 
 ## Cloudflare Pages 部署
 
-此项目已配置为静态导出。连接 GitHub 仓库时，生产分支选 `main`，根目录留空（仓库根目录），框架预设选 `None`，构建命令填 `npm run build`，构建输出目录填 `dist/client`。请勿直接把源码目录或未导出的 `dist/client` 当作网站上传：网站首页需要构建后生成的 `dist/client/index.html`。如果 Pages 构建环境的 Node 版本低于 22.13，请设置 `NODE_VERSION` 为 22 或更高的兼容版本。
+此项目已配置为静态导出。连接 GitHub 仓库时，生产分支选 `main`，根目录留空（仓库根目录），框架预设选 `None`，构建命令填 `npm run build`，构建输出目录填 `dist/client`。仓库中的 `.node-version` 将 Pages 构建环境固定为 Node 22.16.0。请勿直接把源码目录或未导出的 `dist/client` 当作网站上传：网站首页需要构建后生成的 `dist/client/index.html`。
 
 ## 技术
 
