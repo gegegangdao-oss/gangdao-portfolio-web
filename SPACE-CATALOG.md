@@ -1,0 +1,76 @@
+# 空间项目图片归档
+
+按原目录归项目，并结合画面与文件名区分 Before 原图和 Now AI 图。原始文件保留在用户提供的目录，网页使用保持比例的 WebP 副本。
+
+- 深圳 · 深职大幼儿园 / Now / 光里起舞 · 舞蹈室
+  - 来源：`深圳 I 深职大幼儿园项目 I 室内设计/ChatGPT Image 2026年9月14日 02_38_57 (1).png`
+  - 网页：`/media/space/kindergarten/Now/dance-studio.webp`
+- 深圳 · 深职大幼儿园 / Now / 小小秩序 · 收纳区
+  - 来源：`深圳 I 深职大幼儿园项目 I 室内设计/ChatGPT Image 2026年9月14日 02_38_58 (2).png`
+  - 网页：`/media/space/kindergarten/Now/storage-wall.webp`
+- 深圳 · 深职大幼儿园 / Now / 自在探索 · 活动室（延展方案）
+  - 来源：`深圳 I 深职大幼儿园项目 I 室内设计/ChatGPT Image 2026年9月14日 02_38_58 (3).png`
+  - 网页：`/media/space/kindergarten/Now/activity-room.webp`
+- 深圳 · 深职大幼儿园 / Now / 童趣书廊 · 阅读区
+  - 来源：`深圳 I 深职大幼儿园项目 I 室内设计/ChatGPT Image 2026年9月14日 02_38_58 (4).png`
+  - 网页：`/media/space/kindergarten/Now/reading-corridor.webp`
+- 深圳 · 深职大幼儿园 / Before / 童趣书廊 · 阅读区
+  - 来源：`深圳 I 深职大幼儿园项目 I 室内设计/原图图片1.jpg`
+  - 网页：`/media/space/kindergarten/Before/reading-corridor.webp`
+- 深圳 · 深职大幼儿园 / Before / 光里起舞 · 舞蹈室
+  - 来源：`深圳 I 深职大幼儿园项目 I 室内设计/原图图片4.jpg`
+  - 网页：`/media/space/kindergarten/Before/dance-studio.webp`
+- 深圳 · 深职大幼儿园 / Before / 小小秩序 · 收纳区
+  - 来源：`深圳 I 深职大幼儿园项目 I 室内设计/原图图片5.jpg`
+  - 网页：`/media/space/kindergarten/Before/storage-wall.webp`
+- 深圳 · 天空艺术公园 / Now / 流光吧台
+  - 来源：`深圳天空艺术公园/ChatGPT Image 2026年9月14日 02_39_04 (1).png`
+  - 网页：`/media/space/sky-art-park/Now/illuminated-bar.webp`
+- 深圳 · 天空艺术公园 / Now / 蓝调露台
+  - 来源：`深圳天空艺术公园/ChatGPT Image 2026年9月14日 02_39_05 (2).png`
+  - 网页：`/media/space/sky-art-park/Now/roof-terrace.webp`
+- 深圳 · 天空艺术公园 / Now / 空间秩序 · 平面研究（延展方案）
+  - 来源：`深圳天空艺术公园/ChatGPT Image 2026年9月14日 02_39_05 (3).png`
+  - 网页：`/media/space/sky-art-park/Now/floor-plan.webp`
+- 深圳 · 天空艺术公园 / Now / 夜色入口
+  - 来源：`深圳天空艺术公园/ChatGPT Image 2026年9月14日 02_39_05 (4).png`
+  - 网页：`/media/space/sky-art-park/Now/park-entrance.webp`
+- 深圳 · 天空艺术公园 / Before / 流光吧台
+  - 来源：`深圳天空艺术公园/图片6.jpg`
+  - 网页：`/media/space/sky-art-park/Before/illuminated-bar.webp`
+- 深圳 · 天空艺术公园 / Before / 蓝调露台
+  - 来源：`深圳天空艺术公园/图片7.png`
+  - 网页：`/media/space/sky-art-park/Before/roof-terrace.webp`
+- 深圳 · 天空艺术公园 / Before / 夜色入口
+  - 来源：`深圳天空艺术公园/图片8.jpg`
+  - 网页：`/media/space/sky-art-park/Before/park-entrance.webp`
+- 黄田社区东片区九年制学校 / Now / 绿荫餐厅
+  - 来源：`黄田社区东片区九年制学校——室内设计/ChatGPT Image 2026年9月14日 03_10_11 (1).png`
+  - 网页：`/media/space/huangtian-school/Now/dining-hall.webp`
+- 黄田社区东片区九年制学校 / Now / 书间漫游 · 图书馆
+  - 来源：`黄田社区东片区九年制学校——室内设计/ChatGPT Image 2026年9月14日 03_10_12 (2).png`
+  - 网页：`/media/space/huangtian-school/Now/library.webp`
+- 黄田社区东片区九年制学校 / Now / 跃动球场 · 体育馆
+  - 来源：`黄田社区东片区九年制学校——室内设计/ChatGPT Image 2026年9月14日 03_10_12 (3).png`
+  - 网页：`/media/space/huangtian-school/Now/sports-hall.webp`
+- 黄田社区东片区九年制学校 / Now / 日光画室
+  - 来源：`黄田社区东片区九年制学校——室内设计/ChatGPT Image 2026年9月14日 03_10_12 (4).png`
+  - 网页：`/media/space/huangtian-school/Now/art-studio.webp`
+- 黄田社区东片区九年制学校 / Now / 静谧居室
+  - 来源：`黄田社区东片区九年制学校——室内设计/ChatGPT Image 2026年9月14日 03_16_56.png`
+  - 网页：`/media/space/huangtian-school/Now/residence.webp`
+- 黄田社区东片区九年制学校 / Before / 书间漫游 · 图书馆
+  - 来源：`黄田社区东片区九年制学校——室内设计/图片10.jpg`
+  - 网页：`/media/space/huangtian-school/Before/library.webp`
+- 黄田社区东片区九年制学校 / Before / 跃动球场 · 体育馆
+  - 来源：`黄田社区东片区九年制学校——室内设计/图片11.jpg`
+  - 网页：`/media/space/huangtian-school/Before/sports-hall.webp`
+- 黄田社区东片区九年制学校 / Before / 日光画室
+  - 来源：`黄田社区东片区九年制学校——室内设计/图片12.jpg`
+  - 网页：`/media/space/huangtian-school/Before/art-studio.webp`
+- 黄田社区东片区九年制学校 / Before / 静谧居室
+  - 来源：`黄田社区东片区九年制学校——室内设计/图片13.jpg`
+  - 网页：`/media/space/huangtian-school/Before/residence.webp`
+- 黄田社区东片区九年制学校 / Before / 绿荫餐厅
+  - 来源：`黄田社区东片区九年制学校——室内设计/图片9.jpg`
+  - 网页：`/media/space/huangtian-school/Before/dining-hall.webp`

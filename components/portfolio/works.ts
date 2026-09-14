@@ -13,6 +13,6 @@ export const films: Work[] = [
 export const visuals: Work[] = [
   {id:'treasure-pendant-product',title:'财宝天王 · 藏饰静物',english:'TREASURE / STILL LIFE',category:'电商主视觉',description:'木纹、金属与唐卡细节交织，构成温暖而沉静的产品画面。',kind:'image',src:'/media/treasure-pendant-product.webp',width:1340,height:2400},
   {id:'treasure-pendant-editorial',title:'藏饰 · 佩戴叙事',english:'TREASURE / EDITORIAL',category:'电商场景',description:'将饰品放入人物与日光之中，呈现佩戴关系和材质细节。',kind:'image',src:'/media/treasure-pendant-editorial.webp',width:1340,height:2400},
-  {id:'banyan-brick-courtyard',title:'榕荫 · 红砖旧院',english:'BENEATH THE BANYAN',category:'空间氛围',description:'榕树、红砖与斑驳日光，留住院落里的日常片刻。',kind:'image',src:'/media/banyan-brick-courtyard.webp',width:1536,height:1024},
+  {id:'banyan-brick-courtyard',title:'榕荫 · 红砖旧院',english:'BENEATH THE BANYAN',category:'视觉叙事',description:'榕树、红砖与斑驳日光，留住院落里的日常片刻。',kind:'image',src:'/media/banyan-brick-courtyard.webp',width:1536,height:1024},
 ];
 export const workflow: Work = {id:'pendant-video-workflow',title:'藏饰 · 从静帧到影像',english:'FROM STILL TO MOTION',category:'AI 创作流程',description:'从产品主图延展多机位分镜，连接视频、人物与声音节点。',kind:'image',src:'/media/pendant-video-workflow.webp',width:1920,height:919};

@@ -6,6 +6,7 @@ import HeroScreen from './HeroScreen';
 import CubeDirectory from './CubeDirectory';
 import ContentScreen from './ContentScreen';
 import CustomCursor from './CustomCursor';
+import TargetCursor from './TargetCursor';
 const RubiksCube=lazy(()=>import('./RubiksCube'));
 const Lightning=lazy(()=>import('./Lightning'));
 class CubeBoundary extends Component<{children:React.ReactNode},{failed:boolean}>{state={failed:false};static getDerivedStateFromError(){return {failed:true}}render(){return this.state.failed?<span className='cube-error'>三维预览暂不可用<br/><small>可通过文字入口继续浏览</small></span>:this.props.children}}
@@ -45,7 +46,7 @@ return <main ref={rootRef} className={'portfolio '+(isHero?'is-hero':isDirectory
 <AnimatePresence>{isDirectory&&directoryVisible&&<CubeDirectory {...{active,setActive,reduced}} onSelect={select}/>}</AnimatePresence>
 <AnimatePresence>{assembling&&<motion.div className="assembly-flare" aria-hidden="true" initial={{opacity:0,scale:.65}} animate={{opacity:[0,.78,.28,0],scale:[.65,1.12,1.42,1.7]}} exit={{opacity:0}} transition={{duration:1.55,times:[0,.28,.68,1],ease:'easeOut'}}/>}</AnimatePresence>
 <AnimatePresence mode="wait">{!isHero&&!isDirectory&&<ContentScreen key={screen} path={screen} navigate={navigate}/>}</AnimatePresence>
-{!portraitLoaded&&isHero&&<p className="loading-wordmark" role="status">GANGDAO</p>}<CustomCursor/>
+{!portraitLoaded&&isHero&&<p className="loading-wordmark" role="status">GANGDAO</p>}{ready&&['/projects','/films','/visual-space'].includes(screen)?<TargetCursor spinDuration={3} hoverDuration={.25} parallaxOn={true} targetSelector=".work-image, .space-tabs button, .project-index a, .space-project-switch button, .back-link, .gallery-footer a"/>:<CustomCursor/>}
 </main>
 }
 
