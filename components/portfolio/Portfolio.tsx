@@ -18,7 +18,7 @@ const later=(fn:()=>void,ms:number)=>{timers.current.push(setTimeout(fn,ms))};
 // A cached/preloaded SSR image can finish before React attaches its onLoad listener.
 // Reconcile the DOM's actual image state on hydration instead of waiting forever.
 useEffect(()=>{const image=portraitRef.current;if(!image)return;const finish=()=>setPortraitLoaded(true);image.addEventListener('load',finish);image.addEventListener('error',finish);if(image.complete)finish();return()=>{image.removeEventListener('load',finish);image.removeEventListener('error',finish)}},[]);
-useEffect(()=>{const path=location.pathname.replace(/\/$/,'')||'/';if(knownPaths.includes(path)){setScreen(path);setDirectoryVisible(path==='/cube')}setReady(true);const resize=()=>setSize({w:window.innerWidth,h:window.innerHeight});resize();window.addEventListener('resize',resize);const pop=()=>{timers.current.forEach(clearTimeout);busyRef.current=false;setBusy(false);setExpanded(false);const p=location.pathname;setScreen(knownPaths.includes(p)?p:'/');setDirectoryVisible(p==='/cube')};window.addEventListener('popstate',pop);const onKey=(e:KeyboardEvent)=>{if(e.key==='Escape'&&location.pathname!=='/'){pop();history.pushState({},'','/cube');setScreen('/cube');setDirectoryVisible(true)}};window.addEventListener('keydown',onKey);return()=>{window.removeEventListener('resize',resize);window.removeEventListener('popstate',pop);window.removeEventListener('keydown',onKey);timers.current.forEach(clearTimeout)}},[]);
+useEffect(()=>{const path=location.pathname.replace(/\/$/,'')||'/';if(knownPaths.includes(path)){setScreen(path);setDirectoryVisible(path==='/cube')}setReady(true);const resize=()=>setSize({w:window.innerWidth,h:window.innerHeight});resize();window.addEventListener('resize',resize);const pop=()=>{timers.current.forEach(clearTimeout);busyRef.current=false;setBusy(false);setExpanded(false);const p=location.pathname;setScreen(knownPaths.includes(p)?p:'/');setDirectoryVisible(p==='/cube')};window.addEventListener('popstate',pop);const onKey=(e:KeyboardEvent)=>{if(e.key==='Escape'&&!document.querySelector('[data-slot=dialog-content]')&&location.pathname!=='/'){pop();history.pushState({},'','/cube');setScreen('/cube');setDirectoryVisible(true)}};window.addEventListener('keydown',onKey);return()=>{window.removeEventListener('resize',resize);window.removeEventListener('popstate',pop);window.removeEventListener('keydown',onKey);timers.current.forEach(clearTimeout)}},[]);
 const navigate=useCallback((path:string)=>{
 if(busyRef.current||path===screen)return;
 const fromHero=screen==='/'&&path==='/cube';
@@ -49,6 +49,7 @@ return <main ref={rootRef} className={'portfolio '+(isHero?'is-hero':isDirectory
 {!portraitLoaded&&isHero&&<p className="loading-wordmark" role="status">GANGDAO</p>}{ready&&['/projects','/films','/visual-space'].includes(screen)?<TargetCursor spinDuration={3} hoverDuration={.25} parallaxOn={true} targetSelector=".work-image, .space-tabs button, .project-index a, .space-project-switch button, .back-link, .gallery-footer a"/>:<CustomCursor/>}
 </main>
 }
+
 
 
 
