@@ -13,6 +13,7 @@ export default function SpaceCollection({render}:{render:(work:Work,priority?:bo
     <ScrollExpand className="space-intro" src={spaceProjects[1].cover} alt="深圳天空艺术公园，青色灯光中的屋顶露台与夜色入口" title="让空间，发生。" scrollHint="向下滚动 · 走进空间" startWidth={76} startHeight={72} startRadius={32} endRadius={24} scrollDistance={.62} holdDistance={.08} mediaZoom={1.12} overlayScrim={.55} useWindowScroll>
       <span className="space-intro-kicker">SPACE / REIMAGINED</span><h3>从方案，到日常。</h3><p>三个项目，关于光、材质与人的再想象。</p>
     </ScrollExpand>
+    <p className="space-source-note">项目图片分为「原图」与「AI 修改」。AI 画面用于视觉延展；部分画面没有一一对应的原图，具体情况见图片说明。</p>
     {spaceProjects.map((project,index)=><section id={project.id} tabIndex={-1} className="space-project" key={project.id} aria-labelledby={project.id+'-title'}>
       <div className="space-project-heading"><span className="space-project-number">0{index+1}</span><div><span className="space-project-category">{project.category}</span><h3 id={project.id+'-title'}>{project.title}</h3><small>{project.english}</small></div><p>{project.description}</p></div>
       <Tabs defaultValue="Now" className="space-project-tabs">

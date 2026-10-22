@@ -11,8 +11,8 @@ const RubiksCube=lazy(()=>import('./RubiksCube'));
 const Lightning=lazy(()=>import('./Lightning'));
 class CubeBoundary extends Component<{children:React.ReactNode},{failed:boolean}>{state={failed:false};static getDerivedStateFromError(){return {failed:true}}render(){return this.state.failed?<span className='cube-error'>三维预览暂不可用<br/><small>可通过文字入口继续浏览</small></span>:this.props.children}}
 const knownPaths=['/','/cube','/projects','/films','/visual-space','/interactive','/workflow','/about','/contact'];
-export default function Portfolio(){
-const [screen,setScreen]=useState('/');const [directoryVisible,setDirectoryVisible]=useState(false);const [ready,setReady]=useState(false);const [portraitLoaded,setPortraitLoaded]=useState(false);const [active,setActive]=useState<number|null>(null);const [expanded,setExpanded]=useState(false);const [busy,setBusy]=useState(false);const [size,setSize]=useState({w:1672,h:941});
+export default function Portfolio({initialPath='/'}:{initialPath?:string}){
+const [screen,setScreen]=useState(initialPath);const [directoryVisible,setDirectoryVisible]=useState(initialPath==='/cube');const [ready,setReady]=useState(false);const [portraitLoaded,setPortraitLoaded]=useState(false);const [active,setActive]=useState<number|null>(null);const [expanded,setExpanded]=useState(false);const [busy,setBusy]=useState(false);const [size,setSize]=useState({w:1672,h:941});
 const reduced=!!useReducedMotion();const timers=useRef<ReturnType<typeof setTimeout>[]>([]);const busyRef=useRef(false);const rootRef=useRef<HTMLElement>(null);const cubeRef=useRef<HTMLDivElement>(null);const portraitRef=useRef<HTMLImageElement>(null);
 const later=(fn:()=>void,ms:number)=>{timers.current.push(setTimeout(fn,ms))};
 // A cached/preloaded SSR image can finish before React attaches its onLoad listener.
