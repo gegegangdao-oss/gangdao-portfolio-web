@@ -23,17 +23,17 @@ const navigate=useCallback((path:string)=>{
 if(busyRef.current||path===screen)return;
 const fromHero=screen==='/'&&path==='/cube';
 setActive(null);setExpanded(false);
-if(fromHero){busyRef.current=true;setBusy(true);setScreen('/cube');setDirectoryVisible(false);history.pushState({},'',path);later(()=>setDirectoryVisible(true),1400);later(()=>{busyRef.current=false;setBusy(false);cubeRef.current?.focus({preventScroll:true})},1850)}
+if(fromHero&&!reduced){busyRef.current=true;setBusy(true);setScreen('/cube');setDirectoryVisible(false);history.pushState({},'',path);later(()=>setDirectoryVisible(true),1400);later(()=>{busyRef.current=false;setBusy(false);cubeRef.current?.focus({preventScroll:true})},1850)}
 else{setScreen(path);setDirectoryVisible(path==='/cube');history.pushState({},'',path)}
 },[screen,reduced]);
-const select=(path:string)=>{if(busyRef.current)return;busyRef.current=true;setBusy(true);setExpanded(true);later(()=>{setScreen(path);setDirectoryVisible(false);setExpanded(false);busyRef.current=false;setBusy(false);history.pushState({},'',path)},reduced?150:950)};
+const select=(path:string)=>{if(busyRef.current)return;if(path.startsWith('/interior-design')){window.location.assign(path);return;}busyRef.current=true;setBusy(true);setExpanded(true);later(()=>{setScreen(path);setDirectoryVisible(false);setExpanded(false);busyRef.current=false;setBusy(false);history.pushState({},'',path)},reduced?150:950)};
 const isHero=screen==='/';const isDirectory=screen==='/cube';const isResume=screen==='/workflow';const photoWidth=Math.max(size.w,size.h*1672/941);const photoHeight=photoWidth*941/1672;const mobile=size.w<=700;const assembling=busy&&isDirectory&&!expanded;
 const heroCube=mobile?{left:size.w*.3973,top:size.h-size.w*.216,width:size.w*.1769,height:size.w*.1769}:{left:size.w*.5-photoWidth*.026,top:size.h*.5+photoHeight*.235,width:photoWidth*.122,height:photoWidth*.122};
 const directoryCube=mobile?{left:size.w*.5,top:size.h*.455,width:Math.min(size.w*.58,size.h*.28),height:Math.min(size.w*.58,size.h*.28)}:{left:size.w*.5,top:size.h*.501,width:size.w*.255,height:size.w*.255};
 const cubePosition=isHero?heroCube:directoryCube;
 return <main ref={rootRef} className={'portfolio '+(isHero?'is-hero':isDirectory?'is-directory':'is-content')+(isResume?' is-resume':'')+(busy?' is-transitioning':'')+(!portraitLoaded&&isHero?' is-loading':'')} aria-busy={busy}>
 <div className="blue-space"/>
-<AnimatePresence>{isDirectory&&<motion.div key="lightning" className="lightning-layer lightning-container" aria-hidden="true" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:reduced?.01:1.15,delay:assembling?.45:0}}><Suspense fallback={null}><Lightning hue={218} speed={.32} intensity={.52} size={.9}/></Suspense></motion.div>}</AnimatePresence>
+<AnimatePresence>{isDirectory&&!reduced&&<motion.div key="lightning" className="lightning-layer lightning-container" aria-hidden="true" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:reduced?.01:1.15,delay:assembling?.45:0}}><Suspense fallback={null}><Lightning hue={218} speed={.32} intensity={.52} size={.9}/></Suspense></motion.div>}</AnimatePresence>
 <motion.div className="portrait-layer" initial={false} animate={{opacity:isHero?1:0,filter:isHero?'blur(0px) brightness(1)':reduced?'blur(0px) brightness(.8)':'blur(7px) brightness(.8)'}} transition={{opacity:{duration:1,delay:busy?.7:0},filter:{duration:.7,delay:busy?.3:0}}}><img ref={portraitRef} className="portrait" src="/portrait.webp" alt="港岛低头专注于手中的魔方" onLoad={()=>setPortraitLoaded(true)} onError={()=>setPortraitLoaded(true)} fetchPriority="high"/></motion.div>
 {!isResume&&<Header {...{screen,navigate}}/>}
 <AnimatePresence>{isHero&&<motion.div key="hero" className="hero-layer" initial={false} exit={{opacity:0,y:reduced?0:-10}} animate={{opacity:portraitLoaded?1:0}} transition={{duration:.3}}><HeroScreen navigate={navigate}/><div className="cube-hint"><svg viewBox="0 0 90 55" aria-hidden="true"><path d="M0 53 62 3H88"/><circle cx="87" cy="3" r="2"/></svg><p>点击魔方，<br/>探索作品与我</p></div></motion.div>}</AnimatePresence>

@@ -1,15 +1,15 @@
 # GANGDAO · THE CUBE
 
-基于两张已确认设计稿实现的连续交互网页。当前范围为首页与 THE CUBE 目录；六个分类的具体内容暂不展开。
+刘博 / 港岛的个人作品集。首页保留 THE CUBE 交互，站内包含 AI 影像、视觉与空间、简历及联系页面；`/interior-design` 是独立的室内设计作品集板块，收录三个有原始资料支撑的项目及手绘练习。
 
 ## 运行
 
 ```sh
-npm install
+npm ci
 npm run dev
 ```
 
-生产构建：`npm run build`。默认本地地址以终端输出为准。
+终端打印本地地址后，打开该地址的 `/interior-design` 路径；每个项目有独立详情页。生产构建运行 `npm run build`，静态导出位于 `dist/client`。类型检查运行 `./node_modules/.bin/tsc --noEmit`。
 
 ## Cloudflare Pages 部署
 
@@ -17,13 +17,14 @@ npm run dev
 
 ## 技术
 
-React 19、Vite / Vinext 路由、Tailwind CSS、Framer Motion、Three.js、React Three Fiber、Drei。组件位于 components/portfolio，整体样式位于 app/globals.css。
+React 19、Vite / Vinext 路由、Tailwind CSS、Framer Motion、Three.js、React Three Fiber、Drei。原网站组件位于 `components/portfolio`，整体样式位于 `app/globals.css`。室内项目事实、图像说明及来源页码集中在 `lib/interior-projects.ts`，页面位于 `app/interior-design`，板块样式位于 `app/interior-design/interior.css`。
 
 ## 交互
 
 - 首页的魔方与“探索魔方”进入目录，复用同一个 WebGL 场景完成约 1.8 秒转场。
 - 目录魔方支持拖动和惯性；获得键盘焦点后，方向键旋转，Home 复位。
-- 六个目录保留悬停与轻微分离转场；后续内容目前仅作占位。关于页仅使用已提供的简介，联系信息待补充。
+- 六个魔方目录和原有 AI 影像、视觉、简历、联系等内容保留；主导航与“视觉与空间”页可进入室内设计作品集。
+- 室内设计板块提供三个独立项目页、手绘补充区、图像放大浏览、原始图纸说明与响应式排版。
 - 支持浏览器后退、桌面与手机布局、系统减少动态效果设置。
 - WebGL 采用按需渲染，像素比上限 1.5，人物素材为 WebP。
 
@@ -35,8 +36,10 @@ React 19、Vite / Vinext 路由、Tailwind CSS、Framer Motion、Three.js、Reac
 
 字体 Six Caps 与 Anton 来自 Google Fonts，授权见 public/fonts/*-OFL.txt。
 
+室内项目展示图位于 `public/media/interior`，由原始 PPTX / PDF 的内嵌图像提取并优化；原始文件应单独保存，不放入公开仓库。项目时间和个人职责由用户在后续对话中补充；图像均确认为方案效果图。龙华梅关代表项目按概念、草图与空间推演、模型、效果表现、方案深化和实施状态展示；用户确认它尚未建成，原 PDF 没有草图、模型过程截图或建成照片。空间节点图是网站整理示意。其余项目的施工状态尚未确认。
+
 ## 检查范围
 
-通过 TypeScript 检查、生产构建和首页／目录 HTTP 响应检查。已在浏览器复现并修复缓存图片先于 React 加载事件完成时，首页文字与魔方被永久隐藏的问题；通过连续刷新、1672×941 与 1440×900 截图检查，以及点击后每 100ms 读取魔方位置／尺寸和人物透明度，验证约 1.85 秒连续转场。用户主动点击的核心转场保持完整，减少动态效果偏好只简化附加效果。六个分类的真实作品与联系方式未提供，未虚构这些内容。
+当前室内设计板块已通过 TypeScript 检查、生产构建、静态 HTML 路由检查，以及展示图路径和尺寸一致性检查。当前执行环境中的 Chromium 无法完成页面截图，因此桌面与手机的实际浏览器视觉检查尚待可用的预览环境。
 
 

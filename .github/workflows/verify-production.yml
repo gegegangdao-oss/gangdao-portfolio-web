@@ -1,0 +1,15 @@
+name: Verify liubo.eu.cc production
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for Cloudflare and verify public pages and assets
+        run: python3 scripts/verify-production.py

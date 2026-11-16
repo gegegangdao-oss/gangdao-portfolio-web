@@ -16,7 +16,7 @@ export default function CareerFocus() {
         <span>02 / SPACE</span>
         <h3>空间方案与 AI 辅助设计</h3>
         <p>从真实商业、教育空间项目出发，展示方案表达、原始设计图与 AI 视觉延展。</p>
-        <a href="/visual-space">查看空间项目 ↗</a>
+        <a href="/interior-design">查看室内与产品作品集 ↗</a>
       </article>
     </div>
   </section>

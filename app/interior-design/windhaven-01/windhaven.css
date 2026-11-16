@@ -1,0 +1,228 @@
+.interior-shell:has(.windhaven-page){--paper:#f6f3ed;--ink:#25383f;--blue:#244a60;--line:#d7d0c5;background:var(--paper)}
+.interior-shell:has(.windhaven-page)>.site-header{background:#f6f3edf5;border-color:#ddd6ca}
+.interior-shell:has(.windhaven-page)>main{max-width:none;padding:0}
+.interior-shell:has(.windhaven-page)>.interior-footer{background:#eeebe4;border-color:#d7d0c5}
+.windhaven-page{--wh-paper:#f6f3ed;--wh-sand:#e8dfd1;--wh-ink:#25383f;--wh-muted:#68716e;--wh-navy:#173b4c;--wh-line:#d7d0c5;color:var(--wh-ink);font-family:Arial,'PingFang SC','Microsoft YaHei',sans-serif}
+.windhaven-page *{min-width:0}
+.wh-container{width:88%;max-width:1440px;margin-inline:auto}
+.wh-section{padding-block:120px;scroll-margin-top:100px}
+.windhaven-page .wh-label{display:flex;align-items:center;gap:18px;font-size:10px;line-height:1.7;letter-spacing:.15em;margin-bottom:34px}
+.wh-label>span{font-family:Georgia,serif;font-size:15px;color:#8b7d66;border-right:1px solid currentColor;padding-right:18px;letter-spacing:0}
+.windhaven-page h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(40px,4.5vw,72px);line-height:1.1;letter-spacing:-.04em}
+.windhaven-page h2 em{font-weight:400;color:#8a7c66}
+.windhaven-page .wh-body{font-size:14px;line-height:2.05;letter-spacing:.035em;color:var(--wh-muted)}
+.windhaven-page .wh-quote{font-family:Georgia,'Songti SC','SimSun',serif;font-size:clamp(24px,2.4vw,37px);line-height:1.65;letter-spacing:.07em;margin-block:38px 18px}
+.windhaven-page .wh-image-note{font-size:10px;line-height:1.8;letter-spacing:.06em;color:var(--wh-muted);margin-top:14px}
+.wh-breadcrumb{display:flex;align-items:center;justify-content:space-between;padding-block:22px;font-size:10px;letter-spacing:.1em;color:var(--wh-muted)}
+.wh-breadcrumb a{display:flex;gap:10px;align-items:center;padding-block:5px}
+.wh-breadcrumb a:hover{color:var(--wh-navy)}
+.wh-breadcrumb>span{font-size:9px;letter-spacing:.15em}
+.wh-hero{position:relative;isolation:isolate;aspect-ratio:16/9;overflow:hidden;background:#e7dece;width:100%;max-width:1600px;margin-inline:auto}
+.wh-hero:before{content:'';position:absolute;inset:0;background:linear-gradient(105deg,#f3ede1 5%,#e7dece00 55%);z-index:-1}
+.wh-hero-media{position:absolute;inset:0 2% 0 41%;display:flex;align-items:center;justify-content:center;z-index:-2}
+.wh-hero video{display:block;width:100%;height:100%;object-fit:contain}
+.wh-hero-copy{position:absolute;left:max(6%,calc((100% - 1440px)/2));top:14%;width:55%;pointer-events:none}
+.wh-kicker{font-size:9px;letter-spacing:.23em;line-height:1.7}
+.windhaven-page .wh-hero h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(50px,6.5vw,110px);font-weight:400;line-height:1.1;letter-spacing:-.065em;margin-top:34px}
+.wh-hero h1>span{display:block;font-size:.6em;letter-spacing:.03em;margin-top:14px}
+.wh-hero h1 i{font-size:.7em;color:#9f8d70;font-style:normal;margin-inline:8px}
+.windhaven-page .wh-hero-category{font-size:12px;line-height:1.8;letter-spacing:.05em;margin-top:35px}
+.wh-hero-category>span{font-size:10px;letter-spacing:.15em;color:#6d7169}
+.wh-scroll{display:inline-flex;align-items:center;gap:25px;font-size:9px;letter-spacing:.15em;border-bottom:1px solid #9c9b8f;padding-block:15px;margin-top:6vw;pointer-events:auto}
+.wh-scroll:hover svg{transform:translateY(4px)}
+.wh-scroll svg{transition:transform .2s}
+.wh-hero-controls{position:absolute;left:6%;right:4%;bottom:20px;display:flex;justify-content:space-between;align-items:center;gap:15px;font-size:9px;letter-spacing:.12em;pointer-events:none}
+.wh-hero-controls>span{padding-top:15px}
+.wh-hero-controls button{display:flex;align-items:center;gap:9px;min-height:44px;padding:10px 17px;background:#f6f3ede6;color:#25383f;border:1px solid #c1b5a0;pointer-events:auto;font-size:11px}
+.wh-hero-controls button:hover{background:#f6f3ed}
+.wh-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;border-bottom:1px solid var(--wh-line);padding-block:32px}
+.wh-facts>div>span{font-size:9px;letter-spacing:.15em;color:#8a7c66}
+.windhaven-page .wh-facts p{font-size:12px;line-height:1.8;margin-top:12px}
+.wh-concept{display:grid;grid-template-columns:1fr 1fr;gap:12%}
+.windhaven-page .wh-display{font-size:clamp(70px,8.2vw,132px);letter-spacing:-.065em;line-height:.97;margin-top:65px}
+.windhaven-page .wh-translation{font:italic 15px/1.7 Georgia,serif;color:#8c887c}
+.wh-picture{display:block;width:100%;position:relative;padding:0;background:transparent;overflow:hidden;text-align:left;line-height:0}
+.wh-picture img{display:block;width:100%;height:auto;transition:filter .35s;object-fit:contain}
+.wh-picture:hover img{filter:brightness(1.035)}
+.wh-expand{position:absolute;bottom:14px;right:14px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:#f6f3eddf;color:var(--wh-ink);opacity:0;transform:translateY(4px);transition:opacity .2s,transform .2s}
+.wh-picture:hover .wh-expand,.wh-picture:focus-visible .wh-expand{opacity:1;transform:none}
+.windhaven-page .wh-concept-story>.wh-body{margin-top:30px}
+.wh-principles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px;border-top:1px solid var(--wh-line);padding-top:22px}
+.wh-principles span{font-size:9px;letter-spacing:.1em;color:#8a7c66}
+.windhaven-page .wh-principles p{font-size:12px;margin-top:12px;line-height:1.7}
+.wh-object{background:#ebe6dd}
+.wh-section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:45px;margin-bottom:55px}
+.wh-section-heading>.wh-body{max-width:320px;margin-bottom:6px}
+.wh-viewer{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:9%;align-items:center}
+.wh-view-image{position:relative;background:#e2d7c6}
+.wh-view-image .wh-picture{aspect-ratio:1000/1201}
+.wh-view-image img{width:100%;height:100%;object-fit:contain}
+.wh-view-counter{position:absolute;top:20px;left:20px;font-size:10px;letter-spacing:.17em;color:#4b534e;pointer-events:none}
+.wh-view-tabs{border-top:1px solid #c5bcae}
+.wh-view-tabs>button{display:flex;align-items:center;gap:24px;width:100%;padding:22px 0;border-bottom:1px solid #c5bcae;color:#777b72;transition:color .2s}
+.wh-view-tabs>button>img{width:72px;height:86px;object-fit:contain;opacity:.55;transition:opacity .2s}
+.wh-view-tabs>button[aria-selected=true]{color:var(--wh-navy)}
+.wh-view-tabs>button[aria-selected=true]>img,.wh-view-tabs>button:hover>img{opacity:1}
+.wh-view-tabs>button>span{flex:1;text-align:left;font-family:Georgia,serif;font-size:21px;line-height:1.5}
+.wh-view-tabs small{display:block;font:9px/1.5 Arial,sans-serif;letter-spacing:.17em;margin-bottom:9px;color:#8a7c66}
+.wh-view-tabs b{display:block;font:11px/1.8 Arial,'Microsoft YaHei',sans-serif;margin-top:2px}
+.wh-view-tabs svg{align-self:center;opacity:0}
+.wh-view-tabs>button[aria-selected=true] svg{opacity:1}
+.windhaven-page .wh-view-description{font-size:13px;line-height:1.9;color:var(--wh-muted);margin-top:28px;min-height:50px}
+.wh-dimensions{margin-top:28px;padding-top:25px;border-top:1px solid #c5bcae}
+.wh-dimensions>span{font-size:9px;letter-spacing:.17em;color:#8a7c66}
+.windhaven-page .wh-dimensions p{font-family:Georgia,serif;font-size:19px;margin-block:12px}
+.wh-dimensions small{font-size:10px;line-height:1.9;color:var(--wh-muted)}
+.wh-cmf{background:var(--wh-navy);color:#ece7dc}
+.wh-cmf .wh-label{color:#d2d9d7}
+.wh-cmf .wh-label>span{color:#c5b08b}
+.windhaven-page .wh-cmf h2 em{color:#bea988}
+.windhaven-page .wh-cmf .wh-body,.windhaven-page .wh-cmf .wh-image-note{color:#b7c6c8}
+.wh-cmf-layout{display:grid;grid-template-columns:1.15fr 1fr;gap:9%;align-items:start}
+.wh-craft>.wh-picture{aspect-ratio:840/523}
+.wh-craft-pair{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px}
+.wh-craft-pair figcaption{font-size:10px;line-height:1.8;margin-top:13px;color:#c4ccc9}
+.wh-materials{border-top:1px solid #81928d55}
+.wh-material{display:flex;align-items:flex-start;gap:24px;padding-block:24px;border-bottom:1px solid #81928d55}
+.wh-swatch{width:43px;height:43px;border-radius:50%;flex-shrink:0;box-shadow:inset 0 0 0 1px #ffffff15;margin-top:3px}
+.wh-material-en{font-size:9px;letter-spacing:.1em;color:#b9c7c9}
+.wh-material h3{font-size:15px;font-weight:400;margin-block:9px!important;letter-spacing:.1em}
+.windhaven-page .wh-material p{font-size:11px;line-height:1.9;color:#c2cdcc}
+.windhaven-page .wh-cmf-note{font-size:11px;line-height:1.9;color:#bdc9c9;margin-top:42px;padding-top:23px;border-top:1px solid #81928d55}
+.wh-context{display:grid;grid-template-columns:1fr 1.2fr;gap:8%;align-items:center}
+.wh-context-copy>.wh-body{max-width:420px}
+.wh-context-list{padding:0;margin:35px 0 0;list-style:none;border-top:1px solid var(--wh-line)}
+.wh-context-list li{display:grid;grid-template-columns:23px 1fr auto;align-items:center;gap:15px;padding-block:20px;border-bottom:1px solid var(--wh-line);font-size:12px}
+.wh-context-list li>span{font:12px Georgia,serif;color:#8a7c66}
+.wh-context-list small{font-size:8px;letter-spacing:.1em;color:#8c887c}
+.wh-context-image{align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+.wh-context-image .wh-picture{background:#e4d9c9}
+.wh-proposal{background:#eeebe4}
+.wh-download{display:flex;align-items:center;flex-wrap:wrap;gap:12px;font:13px/1.7 Georgia,serif;border-bottom:1px solid #a89d8a;padding-block:15px;max-width:260px}
+.wh-download>span{width:100%;padding-left:28px;font:9px/1.7 Arial,sans-serif;letter-spacing:.15em;color:#8a7c66}
+.wh-download:hover{color:#8a7c66}
+.wh-proposal-browser{width:100%;max-width:1200px;margin-inline:auto}
+.wh-proposal-browser [role=tabpanel]{padding:3.5%;background:#ddd7cb}
+.wh-proposal-browser [role=tabpanel] .wh-picture{aspect-ratio:16/9;box-shadow:0 8px 30px #25383f0d}
+.wh-proposal-browser [role=tabpanel] img{width:100%;height:100%;object-fit:contain}
+.wh-proposal-controls{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #c8c0b3;padding:20px 0;gap:20px}
+.wh-proposal-controls>button{width:48px;height:48px;display:flex;align-items:center;justify-content:center;border:1px solid #c8c0b3;border-radius:50%;transition:background .2s}
+.wh-proposal-controls>button:hover{background:#e0d9cc}
+.wh-proposal-controls>div{text-align:center}
+.wh-proposal-controls span{font-size:9px;letter-spacing:.16em;color:#8a7c66}
+.windhaven-page .wh-proposal-controls p{font-size:13px;line-height:1.7;margin-top:8px}
+.windhaven-page .wh-proposal-note{font-size:11px;line-height:1.85;color:#6c726d;margin-block:16px 22px;min-height:41px}
+.windhaven-page .wh-proposal-note.is-reference{color:#72542e}
+.wh-proposal-tabs{display:flex;gap:24px;border-top:1px solid #d7d0c5}
+.wh-proposal-tabs>button{display:flex;flex:1;align-items:center;justify-content:space-between;gap:8px;padding-block:18px;font-size:11px;color:#73776e;border-top:2px solid transparent;margin-top:-1px;min-height:48px}
+.wh-proposal-tabs>button>span{font:12px Georgia,serif;color:#8a7c66}
+.wh-proposal-tabs>button[aria-selected=true]{border-color:var(--wh-navy);color:var(--wh-navy)}
+.wh-ending{text-align:center}
+.wh-ending .wh-label{justify-content:center}
+.windhaven-page .wh-ending h2{font-size:clamp(40px,5.8vw,94px);margin-block:40px 30px}
+.wh-ending .wh-body{max-width:560px;margin:auto}
+.wh-process{display:flex;justify-content:center;flex-wrap:wrap;list-style:none;padding:0;margin:45px 0;gap:18px 30px}
+.wh-process li{display:flex;align-items:center;gap:15px;font-size:11px;line-height:1.7}
+.wh-process li>span{font:11px Georgia,serif;color:#8a7c66}
+.wh-process svg{color:#a99980}
+.wh-authorship{border-top:1px solid var(--wh-line);padding-top:30px;max-width:760px;margin:0 auto 50px;color:#818579;font-size:10px;line-height:1.9}
+.windhaven-page .wh-authorship>p:first-child{color:#56615a;font-size:12px;margin-bottom:12px;letter-spacing:.08em}
+.wh-back{display:flex;align-items:center;justify-content:center;gap:16px;font-size:13px;width:fit-content;margin:auto;padding-bottom:14px;border-bottom:1px solid #a39781}
+.wh-back>span{font-size:9px;letter-spacing:.15em;color:#8a7c66;margin-left:20px}
+.wh-lightbox{position:fixed;inset:0;width:100vw;max-width:100vw;height:100svh;max-height:100svh;padding:75px 3vw 45px;margin:0;border:none;background:#f6f3edf5;color:#25383f;overflow:auto;text-align:center}
+.wh-lightbox::backdrop{background:#172a35dc}
+.wh-lightbox img{display:block;max-width:100%;width:auto;max-height:calc(100svh - 160px);height:auto;object-fit:contain;margin:auto}
+.wh-lightbox>p{font-size:11px;line-height:1.8;margin:20px auto 0;max-width:900px}
+.wh-lightbox-close{position:fixed;top:20px;right:3vw;display:flex;align-items:center;gap:10px;padding:10px;background:#f6f3ed;font-size:12px;z-index:2}
+@media(hover:none){.wh-expand{opacity:1;transform:none}}
+@media(min-width:1800px){.wh-hero-media{right:6%}.wh-hero-copy{top:16%}}
+@media(max-width:1100px){.wh-container{width:88%}.wh-section{padding-block:85px}.wh-hero h1{font-size:6.2vw}.windhaven-page .wh-hero h1{margin-top:24px}.wh-scroll{margin-top:3vw}.wh-hero-controls{bottom:12px}.wh-concept{gap:8%}.wh-viewer{gap:6%}.wh-view-tabs>button{padding-block:17px;gap:16px}.wh-view-tabs>button>img{width:54px;height:65px}.wh-view-tabs>button>span{font-size:18px}.wh-material{gap:16px;padding-block:18px}.wh-cmf-layout{gap:6%}.wh-context{gap:5%}.wh-context-list li{grid-template-columns:20px 1fr;gap:6px 10px}.wh-context-list small{grid-column:2}.wh-process{gap:18px}.wh-process li{gap:9px}.wh-section-heading{gap:30px}.wh-section-heading>.wh-body{max-width:240px}}
+@media(max-width:700px){
+  .interior-shell:has(.windhaven-page)>.site-header{position:relative}
+  .wh-section{padding-block:68px;scroll-margin-top:20px}
+  .wh-breadcrumb{padding-block:16px;font-size:10px}
+  .wh-breadcrumb>span{display:none}
+  .wh-hero{aspect-ratio:auto;max-height:none;min-height:0;padding-top:245px;background:#e7dece}
+  .wh-hero:before{display:none}
+  .wh-hero-copy{top:33px;left:6%;width:88%;z-index:1}
+  .wh-kicker{font-size:8px;letter-spacing:.17em}
+  .windhaven-page .wh-hero h1{font-size:clamp(39px,10vw,66px);margin-top:20px}
+  .wh-hero h1>span{font-size:.64em;margin-top:9px}
+  .windhaven-page .wh-hero-category{margin-top:20px;font-size:11px;line-height:1.6}
+  .wh-hero-category br{display:none}
+  .wh-hero-category>span{margin-left:12px;font-size:9px}
+  .wh-scroll{margin-top:8px;font-size:8px;padding-block:10px;gap:20px}
+  .wh-hero-media{position:relative;inset:auto;aspect-ratio:3/4;width:100%;z-index:0}
+  .wh-hero video{width:100%;height:100%;object-fit:contain}
+  .wh-hero-controls{position:relative;left:auto;right:auto;bottom:auto;justify-content:space-between;gap:12px;padding:12px 6%;background:#ded3c1;z-index:1;font-size:8px}
+  .wh-hero-controls>span{padding:0}
+  .wh-hero-controls button{font-size:10px;padding:9px 12px}
+  .wh-facts{grid-template-columns:1fr 1fr;gap:26px 18px;padding-block:28px}
+  .wh-facts>div>span{font-size:8px}
+  .windhaven-page .wh-facts p{font-size:11px;margin-top:8px}
+  .wh-concept,.wh-context{grid-template-columns:1fr;gap:40px}
+  .windhaven-page .wh-label{font-size:8px;letter-spacing:.1em;gap:12px;margin-bottom:25px}
+  .wh-label>span{font-size:13px;padding-right:12px}
+  .windhaven-page .wh-display{font-size:84px;margin-top:35px}
+  .windhaven-page .wh-quote{font-size:25px;margin-top:28px}
+  .windhaven-page .wh-translation{font-size:13px}
+  .windhaven-page .wh-body{font-size:13px;line-height:2}
+  .wh-concept-story{padding-top:10px}
+  .wh-principles{gap:10px}
+  .wh-principles span{font-size:8px;letter-spacing:.05em}
+  .windhaven-page .wh-principles p{font-size:11px}
+  .wh-section-heading{display:block;margin-bottom:30px}
+  .wh-section-heading>.wh-body{max-width:none;margin-top:24px}
+  .windhaven-page h2{font-size:clamp(35px,9.5vw,52px)}
+  .wh-viewer{display:flex;flex-direction:column;gap:0}
+  .wh-view-image,.wh-view-sidebar{width:100%}
+  .wh-view-sidebar{margin-top:20px}
+  .wh-view-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border-top:0}
+  .wh-view-tabs>button{display:block;padding:12px 0;border-top:2px solid transparent;border-bottom:1px solid #c5bcae;min-height:92px}
+  .wh-view-tabs>button[aria-selected=true]{border-top-color:var(--wh-navy)}
+  .wh-view-tabs>button>img,.wh-view-tabs>button>svg{display:none}
+  .wh-view-tabs>button>span{display:block;font-size:13px}
+  .wh-view-tabs small{font-size:8px;margin-bottom:6px}
+  .wh-view-tabs b{font-size:10px;margin-top:4px}
+  .windhaven-page .wh-view-description{margin-top:20px;min-height:0;font-size:12px}
+  .wh-dimensions{margin-top:24px;padding-top:22px}
+  .windhaven-page .wh-dimensions p{font-size:19px}
+  .wh-cmf-layout{grid-template-columns:1fr;gap:35px}
+  .wh-craft-pair{gap:12px;margin-top:14px}
+  .wh-craft-pair figcaption{font-size:9px;margin-top:10px}
+  .wh-material{padding-block:22px;gap:20px}
+  .wh-swatch{width:38px;height:38px}
+  .wh-material-en{font-size:8px}
+  .wh-material h3{font-size:14px}
+  .windhaven-page .wh-material p{font-size:11px}
+  .windhaven-page .wh-cmf-note{margin-top:30px;font-size:10px}
+  .wh-context-list{margin-top:25px}
+  .wh-context-list li{grid-template-columns:20px 1fr auto;padding-block:18px}
+  .wh-context-list small{grid-column:auto;font-size:7px;letter-spacing:.03em}
+  .wh-context-image{margin-top:5px}
+  .wh-download{margin-top:24px;font-size:14px;max-width:280px}
+  .wh-proposal-browser [role=tabpanel]{padding:12px}
+  .wh-proposal-controls{padding-block:16px;gap:10px}
+  .wh-proposal-controls>button{width:44px;height:44px}
+  .windhaven-page .wh-proposal-controls p{font-size:12px}
+  .windhaven-page .wh-proposal-note{font-size:10px;min-height:56px}
+  .wh-proposal-tabs{gap:12px}
+  .wh-proposal-tabs>button{flex-direction:column;align-items:flex-start;gap:8px;font-size:9px;line-height:1.6;padding-block:13px}
+  .wh-expand{opacity:1;transform:none;width:28px;height:28px;bottom:10px;right:10px}
+  .wh-ending{text-align:left}
+  .wh-ending .wh-label{justify-content:flex-start}
+  .windhaven-page .wh-ending h2{font-size:clamp(34px,9.1vw,50px);margin-block:28px}
+  .wh-process{display:grid;grid-template-columns:1fr;gap:0;margin-block:30px}
+  .wh-process li{gap:20px;padding-block:15px;border-bottom:1px solid var(--wh-line);font-size:12px}
+  .wh-process svg{margin-left:auto;transform:rotate(90deg)}
+  .wh-authorship{margin-bottom:35px;border-top:0;padding-top:0}
+  .wh-back{margin:0;justify-content:flex-start;font-size:12px;gap:10px;width:100%}
+  .wh-back>span{font-size:8px;margin-left:auto}
+  .wh-lightbox{padding:75px 12px 35px}
+  .wh-lightbox img{max-height:calc(100svh - 210px)}
+  .wh-lightbox>p{font-size:10px;text-align:left;margin-inline:8px}
+}
+@media(prefers-reduced-motion:reduce){.windhaven-page *{scroll-behavior:auto!important;animation:none!important;transition:none!important;transform:none!important}}
+.wh-view-description>span{font:9px/1.7 Arial,sans-serif;letter-spacing:.1em;color:#8a7c66}
+.wh-view-description h3{font-size:17px;font-weight:400;line-height:1.8;margin:12px 0!important;color:#294452}
+.wh-view-description p{font-size:12px;line-height:1.95}
